@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "JavaScript",
+    "image": "https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_960_720.png"
+  },
+  {
+    "id": 2,
+    "name": "React",
+    "image": "https://nextsoftware.io/files/images/logos/main/reactjs-logo.png"
+  },
+  {
+    "id": 3,
+    "name": "Node",
+    "image": "https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png"
+  },
+  {
+    "id": 4,
+    "name": "MongoDB",
+    "image": "https://miro.medium.com/max/512/1*doAg1_fMQKWFoub-6gwUiQ.png "
+  },
+  {
+    "id": 5,
+    "name": "Express",
+    "image": "https://expressjs.com/images/express-facebook-share.png"
+  },
+  {
+    "id": 6,
+    "name": "Bootstrap",
+    "image": "https://seeklogo.com/images/B/bootstrap-logo-3C30FB2A16-seeklogo.com.png"
+  },
+  {
+    "id": 7,
+    "name": "C#",
+    "image": "https://cdn.pixabay.com/photo/2017/03/30/13/34/c-2188446_960_720.png"
+  },
+  {
+    "id": 8,
+    "name": "C++",
+    "image": "https://cdn.pixabay.com/photo/2017/03/30/17/43/c-2189150_960_720.png"
+  },
+  {
+    "id": 9,
+    "name": "Python",
+    "image": "https://www.pngfind.com/pngs/m/62-626208_python-logo-png-transparent-background-python-logo-png.png"
+  },
+  {
+    "id": 10,
+    "name": "Java",
+    "image": "https://w1.pngwing.com/pngs/425/99/png-transparent-java-logo-programming-language-selenium-computer-software-java-class-file-computer-programming-software-developer-software-framework.png"
+  },
+  {
+    "id": 11,
+    "name": "PHP",
+    "image": "https://cdn.pixabay.com/photo/2013/07/12/16/35/php-151199_960_720.png"
+  },
+  {
+    "id": 12,
+    "name": "Ruby",
+    "image": "https://img.favpng.com/20/13/10/ruby-programming-language-computer-programming-png-favpng-YFg6369PxUX5wJk9LaqGQgc2j.jpg"
+  },
+  {
+    "id": 13,
+    "name": "CSS",
+    "image": "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png"
+  },
+  {
+    "id": 14,
+    "name": "HTML",
+    "image": "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png"
+  },
+  {
+    "id": 15,
+    "name": "SQL",
+    "image": "https://cdn.pixabay.com/photo/2013/09/18/12/13/sqlite-183454_960_720.png"
+  },
+  {
+    "id": 16,
+    "name": "Vue",
+    "image": "https://cdn.sanity.io/images/8edntncj/production/7cb22a8a9885468d96662f6ece61ceb2bc95666d-500x300.png"
+  }
+]
