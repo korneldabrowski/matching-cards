@@ -5,15 +5,17 @@ import cn from "../../lib/cn";
 interface Props {
   card: GeneratedCard;
   isFlipped: boolean;
+  isChosen: boolean;
   onClick: (card: GeneratedCard) => void;
 }
 
-const Card = ({ card, onClick, isFlipped }: Props) => {
+const Card = ({ card, onClick, isFlipped, isChosen }: Props) => {
   return (
     <div
       onClick={() => onClick(card)}
       className={cn(
-        "card-compact card relative mx-auto h-full w-96 cursor-pointer items-center border-2  bg-base-100 shadow-xl hover:shadow-xl hover:shadow-white"
+        "card-compact card relative mx-auto h-full w-full  cursor-pointer items-center border-2  bg-base-100 shadow-xl hover:shadow-xl hover:shadow-white",
+        isChosen && " bg-accent "
       )}
     >
       <img
@@ -31,7 +33,9 @@ const Card = ({ card, onClick, isFlipped }: Props) => {
         />
       </figure>
       <div className="card-body ">
-        <h2 className="card-title mt-auto justify-center ">{card.cardName}</h2>
+        <h2 className="card-title mt-auto justify-center text-6xl text-accent-content ">
+          {card.cardName}
+        </h2>
       </div>
     </div>
   );

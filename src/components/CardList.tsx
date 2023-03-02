@@ -13,6 +13,12 @@ export default function CardList() {
   const [matchedCards, setMatchedCards] = useState<GeneratedCard[]>([]); // array of matched cards
 
   useEffect(() => {
+    if (matchedCards.length === numCards) {
+      alert("You won!");
+    }
+  }, [matchedCards]);
+
+  useEffect(() => {
     setCardDataArray([]);
     setChosenCards([]);
     setMatchedCards([]);
@@ -58,15 +64,17 @@ export default function CardList() {
     // If two cards are chosen, check for a match
     if (newChosenCards.length === 2) {
       if (newChosenCards[0].cardImage === newChosenCards[1].cardImage) {
-        // If cards match, add them to matchedCards array
-        setMatchedCards([...matchedCards, newChosenCards[0]]);
-        setChosenCards([]);
-        console.log("match");
+        setTimeout(() => {
+          // If cards match, add them to matchedCards array
+          setMatchedCards([...matchedCards, newChosenCards[0]]);
+          setChosenCards([]);
+          console.log("match");
+        }, 200);
       } else {
         setTimeout(() => {
           setChosenCards([]);
           console.log("no match");
-        }, 1000);
+        }, 500);
       }
     }
   }
@@ -94,7 +102,7 @@ export default function CardList() {
       </div>
       <div
         className={cn(
-          " min-h-16  mx-auto grid grid-cols-3 grid-rows-1 items-center justify-center  gap-y-4 border-2 align-middle "
+          " min-h-16  mx-auto grid grid-cols-4 grid-rows-1 items-center justify-center  gap-y-4 border-2 align-middle "
         )}
       >
         {cardDataArray.map((cardData, index) => (
@@ -106,6 +114,7 @@ export default function CardList() {
                 (matchedCard) => matchedCard.cardImage === cardData.cardImage
               )
             }
+            isChosen={chosenCards.includes(cardData)}
             onClick={(card) => handleCardClick(card)}
             card={cardData}
           />
