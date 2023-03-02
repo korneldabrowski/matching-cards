@@ -1,25 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { CardProps } from "../../types/types";
+import { GeneratedCard } from "../../types/types";
 import cn from "../../lib/cn";
 
-interface Props extends CardProps {
-  onClick: () => void;
+interface Props {
+  card: GeneratedCard;
+  isFlipped: boolean;
+  onClick: (card: GeneratedCard) => void;
 }
 
-const Card = ({ id, name, image, onClick }: Props) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  function toggleFlip() {
-    onClick();
-    setIsFlipped(true);
-  }
-
+const Card = ({ card, onClick, isFlipped }: Props) => {
   return (
     <div
-      onClick={toggleFlip}
+      onClick={() => onClick(card)}
       className={cn(
-        "card-compact card relative mx-auto h-full w-96 cursor-pointer  items-center border-2 bg-base-100 shadow-xl"
-        // isFlipped ? "bg-base-100" : " "
+        "card-compact card relative mx-auto h-full w-96 cursor-pointer items-center border-2  bg-base-100 shadow-xl hover:shadow-xl hover:shadow-white"
       )}
     >
       <img
@@ -32,12 +26,12 @@ const Card = ({ id, name, image, onClick }: Props) => {
       <figure>
         <img
           className="mask mask-hexagon-2 object-fill"
-          src={image}
-          alt={`logo of ` + name}
+          src={card.cardImage}
+          alt={`logo of ` + card.cardName}
         />
       </figure>
       <div className="card-body ">
-        <h2 className="card-title mt-auto justify-center ">{name}</h2>
+        <h2 className="card-title mt-auto justify-center ">{card.cardName}</h2>
       </div>
     </div>
   );

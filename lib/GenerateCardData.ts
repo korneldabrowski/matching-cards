@@ -5,15 +5,18 @@ export class Card {
   id: CardProps["id"];
   image: CardProps["image"];
   name: CardProps["name"];
+  isFlipped: CardProps["isFlipped"] = false;
 
   constructor(
     id: CardProps["id"],
     image: CardProps["image"],
-    name: CardProps["name"]
+    name: CardProps["name"],
+    isFlipped: CardProps["isFlipped"] = false
   ) {
     this.id = id;
     this.image = image;
     this.name = name;
+    this.isFlipped = isFlipped;
   }
 }
 
